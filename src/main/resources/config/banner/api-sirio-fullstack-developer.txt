@@ -1,4 +1,4 @@
 
-          ${AnsiBackground.BRIGHT_GREEN}${AnsiColor.BLACK}API-FINANCIAL-CONTROLLER${AnsiBackground.DEFAULT}
-${AnsiColor.YELLOW}    >>> ${AnsiStyle.UNDERLINE}${application.title}sirio-full-stack-developer - 0.1.0-SNAPSHOT${application.version}${application.formatted-version}${AnsiStyle.NORMAL}${AnsiColor.YELLOW} <<<
-${AnsiStyle.FAINT}${AnsiColor.RED}:: Created at Spring Boot ${spring-boot.version} ${spring-boot.formatted-version} ::${AnsiStyle.NORMAL}${AnsiColor.DEFAULT}
+           ${AnsiBackground.BLUE}${AnsiColor.BRIGHT_WHITE}API-SIRIO-FULLSTACK-DEVELOPER${AnsiBackground.DEFAULT}
+${AnsiColor.YELLOW}>>> ${AnsiStyle.UNDERLINE}${application.title}sirio-full-stack-developer - 0.1.0-SNAPSHOT${application.version}${application.formatted-version}${AnsiStyle.NORMAL}${AnsiColor.YELLOW} <<<
+${AnsiStyle.FAINT}${AnsiColor.RED}    :: Created at Spring Boot ${spring-boot.version} ${spring-boot.formatted-version} ::${AnsiStyle.NORMAL}${AnsiColor.DEFAULT}

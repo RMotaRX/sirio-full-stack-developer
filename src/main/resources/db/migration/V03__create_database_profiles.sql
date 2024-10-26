@@ -1,7 +1,12 @@
-CREATE TABLE usuarios(
-  id BIGINT(20) NOT NULL,
- 	nome VARCHAR(40) NOT NULL,
- 	email VARCHAR(50) NOT NULL UNIQUE,
- 	senha VARCHAR(150) NOT NULL,
- 	PRIMARY KEY (id)
+CREATE TABLE perfis(
+  id BIGINT(36) NOT NULL AUTO_INCREMENT,
+  descricao VARCHAR(50) NOT NULL,
+  PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO perfis (id, descricao) VALUES (1, 'ROLE_REGISTER_USER');
+INSERT INTO perfis (id, descricao) VALUES (2, 'ROLE_REMOVE_USER');
+INSERT INTO perfis (id, descricao) VALUES (3, 'ROLE_SEARCH_USER');
+INSERT INTO perfis (id, descricao) VALUES (4, 'ROLE_REGISTER_PERSONA');
+INSERT INTO perfis (id, descricao) VALUES (5, 'ROLE_REMOVE_PERSONA');
+INSERT INTO perfis (id, descricao) VALUES (6, 'ROLE_SEARCH_PERSONA');

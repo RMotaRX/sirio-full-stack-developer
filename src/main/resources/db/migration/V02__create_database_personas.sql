@@ -1,4 +1,4 @@
-CREATE TABLE persona(
+CREATE TABLE personas(
   id BIGINT(36) NOT NULL AUTO_INCREMENT,
   nome VARCHAR(50) NOT NULL,
   cpf VARCHAR(11) NOT NULL UNIQUE,
@@ -13,6 +13,7 @@ CREATE TABLE persona(
   status VARCHAR(8) NOT NULL,
   data_criacao DATE,
   data_remocao DATE,
-  id_usuario BIGINT(36) NOT NULL
-
-);
+  id_usuario BIGINT(36) NOT NULL,
+  PRIMARY KEY (id, cpf),
+  FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
