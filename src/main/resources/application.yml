@@ -3,7 +3,7 @@ server:
     enabled: true
   port: ${PORT:8091}
   servlet:
-    context-path: /api/fullstack/teste/
+    context-path: /api/fullstack/test/
 
 spring:
   application:
@@ -25,3 +25,9 @@ spring:
     username: ${USR:root}
     password: ${PSW:toor}
     driver-class-name: ${DRIVER:com.mysql.cj.jdbc.Driver}
+
+# SECRET_KEY
+api:
+  security:
+    token:
+      secret: ${JWT_SECRET:secret-key}

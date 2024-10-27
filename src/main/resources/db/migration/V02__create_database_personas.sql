@@ -12,6 +12,7 @@ CREATE TABLE personas(
   estado VARCHAR(2),
   status VARCHAR(8) NOT NULL,
   data_criacao DATE,
+  data_atualizacao DATE,
   data_remocao DATE,
   id_usuario BIGINT(36) NOT NULL,
   PRIMARY KEY (id, cpf),
