@@ -27,7 +27,7 @@ spring:
     driver-class-name: ${DRIVER:com.mysql.cj.jdbc.Driver}
 
 # SECRET_KEY
-api:
+sirio-full-stack-developer:
   security:
     token:
       secret: ${JWT_SECRET:secret-key}

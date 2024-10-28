@@ -38,6 +38,7 @@
 		<modelmapper.version>2.3.9</modelmapper.version>
 		<springdoc.openapi.ui.version>2.0.4</springdoc.openapi.ui.version>
 		<java.jwt.version>4.4.0</java.jwt.version>
+		<assertj.core.version>3.24.2</assertj.core.version>
 	</properties>
 
 	<dependencies>
@@ -110,6 +111,13 @@
 			<groupId>com.auth0</groupId>
 			<artifactId>java-jwt</artifactId>
 			<version>${java.jwt.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>${assertj.core.version}</version>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
