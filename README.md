@@ -16,3 +16,8 @@
 # .env File
 
 Place the following constants inside the `.env` file located at `src/main/resources/`:
+
+MYSQL_ROOT_PASSWORD=toor
+MYSQL_DATABASE=sirio
+MYSQL_USER=admin
+MYSQL_PASSWORD=admin
