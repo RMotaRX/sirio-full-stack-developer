@@ -10,13 +10,11 @@ public interface PersonaService {
 
   PersonaResponse registerPersona(PersonaRequest request);
 
-  Optional<Object> fetchPersonaById(Long id);
+  Optional<PersonaResponse> fetchPersonaById(Long id);
 
   List<PersonaResponse> fetchAllPersonas();
 
   PersonaResponse updatePersona(Long id, PersonaRequest request);
-
-  void updateStatusProperty(Long id, StatusEnum request);
 
   void deletePersona(Long id);
 }

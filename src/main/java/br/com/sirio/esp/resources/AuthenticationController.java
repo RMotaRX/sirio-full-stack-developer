@@ -8,7 +8,6 @@ import br.com.sirio.esp.domain.models.User;
 import br.com.sirio.esp.services.implementation.UserServiceImpl;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.antlr.v4.runtime.Token;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -20,14 +19,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/auth")
-public class AuthenticationController {
+public class AuthenticationController implements IAuthenticationController {
 
   private final AuthenticationManager manager;
   private final UserServiceImpl userService;
   private final TokenConfig tokenConfig;
 
   @PostMapping("/login")
-  public ResponseEntity<?> login(@RequestBody @Valid AuthenticationRequest request) {
+  public ResponseEntity<AuthenticationResponse> login(@RequestBody @Valid AuthenticationRequest request) {
      var usrPsw = new UsernamePasswordAuthenticationToken(request.email(), request.password());
      var authentication = this.manager.authenticate(usrPsw);
 

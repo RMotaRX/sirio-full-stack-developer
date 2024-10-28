@@ -14,6 +14,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -35,6 +36,9 @@ public class Persona implements Serializable {
   @Column(length = 11, unique = true)
   private String cpf;
 
+  @Column(name = "data_nascimento", nullable = false)
+  private LocalDate birthdate;
+
   @Column(name = "celular", length = 20, nullable = false, unique = true)
   private String cellphone;
 
@@ -46,13 +50,13 @@ public class Persona implements Serializable {
   private StatusEnum status;
 
   @Column(name = "data_criacao")
-  private LocalDate creationAt;
+  private LocalDateTime creationAt;
 
   @Column(name = "data_atualizacao")
-  private LocalDate updatedAt;
+  private LocalDateTime updatedAt;
 
   @Column(name = "data_remocao")
-  private LocalDate removalAt;
+  private LocalDateTime removalAt;
 
   @ManyToOne
   @JoinColumn(name = "id_usuario")

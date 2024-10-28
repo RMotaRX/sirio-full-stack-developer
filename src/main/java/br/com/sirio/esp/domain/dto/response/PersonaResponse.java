@@ -18,6 +18,7 @@ public class PersonaResponse {
   private Long id;
   private String name;
   private String cpf;
+  private LocalDate birthdate;
   private String cellphone;
   private Address address;
   private String status;

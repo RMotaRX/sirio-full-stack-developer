@@ -18,6 +18,11 @@ import org.springframework.web.context.request.WebRequest;
 @RequiredArgsConstructor
 public class SirioFullStackDeveloperExceptionHandler {
 
+  /*
+  * Here, I could add a class with a list of errors and inject the values of the messages
+  * from the messages.properties file as constants; however, I ran out of time to refactor.
+  * */
+
   private final MessageSource messageSource;
 
   @ExceptionHandler(HttpMessageNotReadableException.class)

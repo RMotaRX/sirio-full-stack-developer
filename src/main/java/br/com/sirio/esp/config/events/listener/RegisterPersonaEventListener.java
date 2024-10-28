@@ -4,6 +4,7 @@ import br.com.sirio.esp.config.events.RegisterPersonaEvent;
 import br.com.sirio.esp.domain.models.Persona;
 import br.com.sirio.esp.domain.models.enums.StatusEnum;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
@@ -15,6 +16,6 @@ public class RegisterPersonaEventListener implements ApplicationListener<Registe
     Persona persona = event.getPersona();
 
     persona.setStatus(StatusEnum.ACTIVE);
-    persona.setCreationAt(LocalDate.now());
+    persona.setCreationAt(LocalDateTime.now());
   }
 }

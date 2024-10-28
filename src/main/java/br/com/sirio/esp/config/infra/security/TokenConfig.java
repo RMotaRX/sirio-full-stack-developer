@@ -24,7 +24,7 @@ public class TokenConfig {
       return JWT.create()
           .withIssuer("auth-api")
           .withSubject(user.getEmail())
-          .withExpiresAt(generateExpirationdate())
+          .withExpiresAt(generateExpirationDate())
           .sign(algorithm);
     } catch (JWTCreationException ex) {
       throw new RuntimeException("Error while generating token", ex);
@@ -45,7 +45,9 @@ public class TokenConfig {
     }
   }
 
-  private Instant generateExpirationdate() {
+  private Instant generateExpirationDate() {
     return LocalDateTime.now().plusHours(2).toInstant(ZoneOffset.of("-03:00"));
   }
 }
+
+// TODO: Separate the authentication and verify the information of the logged-in user via token with Node.Js Application
